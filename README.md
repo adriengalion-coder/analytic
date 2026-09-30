@@ -22,11 +22,15 @@ Un hébergement mutualisé classique ne fait pas tourner Docker.
 
 ### Sur ton ordinateur (Windows)
 
-Docker Desktop installé et lancé (« Engine running »), puis :
+Docker Desktop installé et lancé (« Engine running »). Git n'est pas nécessaire.
 
-```powershell
-powershell -ExecutionPolicy Bypass -File installer.ps1
-```
+1. Sur GitHub, ouvre `installer.ps1` dans ce dépôt et clique sur l'icône
+   **Download raw file** (flèche vers le bas, en haut à droite du fichier).
+2. Dans PowerShell :
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File "$HOME\Downloads\installer.ps1"
+   ```
+3. Le script ouvre http://localhost:8000 quand Plausible est prêt.
 
 Le port 8000 est déjà pris ? Ajoute `-Port 8001`.
 
