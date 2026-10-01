@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapport boutique-exemple.fr — septembre 2026</title>
+<style>
+:root{color-scheme:light;--fond:#ffffff;--surface:#f6f6f4;--texte:#0b0b0b;--texte-2:#52514e;--texte-3:#7a7974;--trait:#e4e3df;--serie:#2a78d6;--piste:#e9eef6;--note:#fff6d6}
+@media screen and (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--fond:#121212;--surface:#1a1a19;--texte:#ffffff;--texte-2:#c3c2b7;--texte-3:#97968f;--trait:#2e2e2c;--serie:#3987e5;--piste:#24303f;--note:#3a3320}}
+:root[data-theme="dark"]{color-scheme:dark;--fond:#121212;--surface:#1a1a19;--texte:#ffffff;--texte-2:#c3c2b7;--texte-3:#97968f;--trait:#2e2e2c;--serie:#3987e5;--piste:#24303f;--note:#3a3320}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--texte);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.feuille{max-width:820px;margin:0 auto;padding:32px 16px 48px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;border-bottom:2px solid var(--texte);padding-bottom:12px;margin-bottom:20px;flex-wrap:wrap}
+header h1{margin:0;font-size:24px;letter-spacing:-.01em}
+header .site{color:var(--texte-2);font-size:15px}
+header .agence{text-align:right;color:var(--texte-2);font-size:13px}
+.tuiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.tuile{background:var(--surface);border-radius:10px;padding:12px 14px}
+.tuile .lib{color:var(--texte-2);font-size:12.5px}
+.tuile .val{font-size:24px;font-weight:650;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.evo{display:block;color:var(--texte-2);font-size:12px}
+.aide{color:var(--texte-3);font-size:11.5px}
+h2{font-size:15px;margin:22px 0 8px}
+h3{font-size:13.5px;margin:0 0 6px}
+.graph{width:100%;height:auto;display:block}
+.grille{stroke:var(--trait);stroke-width:1}
+.axe{fill:var(--texte-3);font-size:10px;font-variant-numeric:tabular-nums}
+.barre{fill:var(--serie)}
+.jour:hover .barre{opacity:.75}
+.bulle{position:fixed;pointer-events:none;background:var(--texte);color:var(--fond);font-size:12px;padding:4px 8px;border-radius:6px;opacity:0;transition:opacity .1s}
+.grille2{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{color:var(--texte-3);font-weight:500;font-size:11.5px;text-align:left;padding:0 0 4px}
+td{padding:4px 0;border-top:1px solid var(--trait);vertical-align:top}
+.num{text-align:right;white-space:nowrap;padding-left:10px}
+.nom{overflow-wrap:anywhere}
+.part{color:var(--texte-3)}
+.piste{height:4px;background:var(--piste);border-radius:2px;margin-top:3px}
+.piste span{display:block;height:4px;background:var(--serie);border-radius:2px}
+.vide{color:var(--texte-3);margin:0}
+ul{margin:0;padding-left:18px}
+li{margin:3px 0}
+.a-remplir{background:var(--note);border-radius:6px;padding:8px 10px;outline:none;min-height:1.5em}
+.a-remplir:focus{box-shadow:0 0 0 2px var(--serie)}
+.consigne{color:var(--texte-3);font-size:12px;margin:4px 0 0}
+footer{margin-top:28px;padding-top:10px;border-top:1px solid var(--trait);color:var(--texte-3);font-size:11.5px}
+@media (max-width:640px){.tuiles{grid-template-columns:1fr 1fr}.grille2{grid-template-columns:1fr}}
+@page{size:A4;margin:12mm}
+@media print{.feuille{padding:0;max-width:none}.consigne,.bulle{display:none}.a-remplir{background:none;padding:0}body{font-size:12.5px}.tuile{break-inside:avoid}.bloc{break-inside:avoid}}
+</style></head>
+<body><div class="feuille">
+<header>
+  <div><h1>Rapport de septembre 2026</h1><div class="site">boutique-exemple.fr</div></div>
+  <div class="agence"><b>Ton agence</b><br>Mesure d'audience sans cookie</div>
+</header>
+
+<div class="tuiles">
+  <div class="tuile"><div class="lib">Visiteurs</div><div class="val">3 790</div><span class="evo">▲ +18 % vs août</span><div class="aide">personnes différentes</div></div>
+  <div class="tuile"><div class="lib">Visites</div><div class="val">4 965</div><span class="evo">▲ +24,7 % vs août</span></div>
+  <div class="tuile"><div class="lib">Pages vues</div><div class="val">12 886</div><span class="evo">▲ +29,4 % vs août</span><div class="aide">2,6 par visite</div></div>
+  <div class="tuile"><div class="lib">Temps passé</div><div class="val">2 min 14 s</div><span class="evo">▲ +10,7 % vs août</span><div class="aide">par visite, en moyenne</div></div>
+  <div class="tuile"><div class="lib">Repartis aussitôt</div><div class="val">48 %</div><span class="evo">▼ −4 pts vs août</span><div class="aide">visites d'une seule page</div></div>
+  <div class="tuile"><div class="lib">Conversions</div><div class="val">140</div><span class="evo">Achat</span></div>
+</div>
+
+<h2>Visiteurs par jour</h2>
+<svg viewBox="0 0 680 150" class="graph" role="img" aria-label="Visiteurs par jour en septembre"><line x1="34" x2="680" y1="128" y2="128" class="grille"/><text x="28" y="132" class="axe" text-anchor="end">0</text><line x1="34" x2="680" y1="68" y2="68" class="grille"/><text x="28" y="72" class="axe" text-anchor="end">150</text><line x1="34" x2="680" y1="8" y2="8" class="grille"/><text x="28" y="12" class="axe" text-anchor="end">300</text><g class="jour" data-info="1 septembre : 110 visiteurs"><rect x="34" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M35,128 V88 Q35,84 39,84 H50.53333333333333 Q54.53333333333333,84 54.53333333333333,88 V128 Z" class="barre"/><text x="44.766666666666666" y="144" class="axe" text-anchor="middle">1</text></g><g class="jour" data-info="2 septembre : 153 visiteurs"><rect x="55.53333333333333" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M56.53333333333333,128 V70.8 Q56.53333333333333,66.8 60.53333333333333,66.8 H72.06666666666666 Q76.06666666666666,66.8 76.06666666666666,70.8 V128 Z" class="barre"/></g><g class="jour" data-info="3 septembre : 126 visiteurs"><rect x="77.06666666666666" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M78.06666666666666,128 V81.6 Q78.06666666666666,77.6 82.06666666666666,77.6 H93.6 Q97.6,77.6 97.6,81.6 V128 Z" class="barre"/></g><g class="jour" data-info="4 septembre : 124 visiteurs"><rect x="98.60000000000001" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M99.60000000000001,128 V82.4 Q99.60000000000001,78.4 103.60000000000001,78.4 H115.13333333333334 Q119.13333333333334,78.4 119.13333333333334,82.4 V128 Z" class="barre"/></g><g class="jour" data-info="5 septembre : 109 visiteurs"><rect x="120.13333333333334" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M121.13333333333334,128 V88.4 Q121.13333333333334,84.4 125.13333333333334,84.4 H136.66666666666669 Q140.66666666666669,84.4 140.66666666666669,88.4 V128 Z" class="barre"/><text x="130.9" y="144" class="axe" text-anchor="middle">5</text></g><g class="jour" data-info="6 septembre : 102 visiteurs"><rect x="141.66666666666669" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M142.66666666666669,128 V91.19999999999999 Q142.66666666666669,87.19999999999999 146.66666666666669,87.19999999999999 H158.20000000000002 Q162.20000000000002,87.19999999999999 162.20000000000002,91.19999999999999 V128 Z" class="barre"/></g><g class="jour" data-info="7 septembre : 134 visiteurs"><rect x="163.20000000000002" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M164.20000000000002,128 V78.4 Q164.20000000000002,74.4 168.20000000000002,74.4 H179.73333333333335 Q183.73333333333335,74.4 183.73333333333335,78.4 V128 Z" class="barre"/></g><g class="jour" data-info="8 septembre : 155 visiteurs"><rect x="184.73333333333335" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M185.73333333333335,128 V70 Q185.73333333333335,66 189.73333333333335,66 H201.26666666666668 Q205.26666666666668,66 205.26666666666668,70 V128 Z" class="barre"/></g><g class="jour" data-info="9 septembre : 157 visiteurs"><rect x="206.26666666666668" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M207.26666666666668,128 V69.2 Q207.26666666666668,65.2 211.26666666666668,65.2 H222.8 Q226.8,65.2 226.8,69.2 V128 Z" class="barre"/></g><g class="jour" data-info="10 septembre : 149 visiteurs"><rect x="227.8" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M228.8,128 V72.4 Q228.8,68.4 232.8,68.4 H244.33333333333334 Q248.33333333333334,68.4 248.33333333333334,72.4 V128 Z" class="barre"/><text x="238.5666666666667" y="144" class="axe" text-anchor="middle">10</text></g><g class="jour" data-info="11 septembre : 157 visiteurs"><rect x="249.33333333333334" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M250.33333333333334,128 V69.2 Q250.33333333333334,65.2 254.33333333333334,65.2 H265.8666666666667 Q269.8666666666667,65.2 269.8666666666667,69.2 V128 Z" class="barre"/></g><g class="jour" data-info="12 septembre : 116 visiteurs"><rect x="270.8666666666667" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M271.8666666666667,128 V85.6 Q271.8666666666667,81.6 275.8666666666667,81.6 H287.40000000000003 Q291.40000000000003,81.6 291.40000000000003,85.6 V128 Z" class="barre"/></g><g class="jour" data-info="13 septembre : 126 visiteurs"><rect x="292.40000000000003" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M293.40000000000003,128 V81.6 Q293.40000000000003,77.6 297.40000000000003,77.6 H308.9333333333334 Q312.9333333333334,77.6 312.9333333333334,81.6 V128 Z" class="barre"/></g><g class="jour" data-info="14 septembre : 142 visiteurs"><rect x="313.93333333333334" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M314.93333333333334,128 V75.2 Q314.93333333333334,71.2 318.93333333333334,71.2 H330.4666666666667 Q334.4666666666667,71.2 334.4666666666667,75.2 V128 Z" class="barre"/></g><g class="jour" data-info="15 septembre : 149 visiteurs"><rect x="335.4666666666667" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M336.4666666666667,128 V72.4 Q336.4666666666667,68.4 340.4666666666667,68.4 H352.00000000000006 Q356.00000000000006,68.4 356.00000000000006,72.4 V128 Z" class="barre"/><text x="346.23333333333335" y="144" class="axe" text-anchor="middle">15</text></g><g class="jour" data-info="16 septembre : 166 visiteurs"><rect x="357" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M358,128 V65.6 Q358,61.599999999999994 362,61.599999999999994 H373.53333333333336 Q377.53333333333336,61.599999999999994 377.53333333333336,65.6 V128 Z" class="barre"/></g><g class="jour" data-info="17 septembre : 167 visiteurs"><rect x="378.53333333333336" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M379.53333333333336,128 V65.2 Q379.53333333333336,61.2 383.53333333333336,61.2 H395.0666666666667 Q399.0666666666667,61.2 399.0666666666667,65.2 V128 Z" class="barre"/></g><g class="jour" data-info="18 septembre : 300 visiteurs"><rect x="400.0666666666667" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M401.0666666666667,128 V12 Q401.0666666666667,8 405.0666666666667,8 H416.6000000000001 Q420.6000000000001,8 420.6000000000001,12 V128 Z" class="barre"/></g><g class="jour" data-info="19 septembre : 130 visiteurs"><rect x="421.6" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M422.6,128 V80 Q422.6,76 426.6,76 H438.1333333333334 Q442.1333333333334,76 442.1333333333334,80 V128 Z" class="barre"/></g><g class="jour" data-info="20 septembre : 121 visiteurs"><rect x="443.1333333333334" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M444.1333333333334,128 V83.6 Q444.1333333333334,79.6 448.1333333333334,79.6 H459.66666666666674 Q463.66666666666674,79.6 463.66666666666674,83.6 V128 Z" class="barre"/><text x="453.90000000000003" y="144" class="axe" text-anchor="middle">20</text></g><g class="jour" data-info="21 septembre : 184 visiteurs"><rect x="464.6666666666667" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M465.6666666666667,128 V58.400000000000006 Q465.6666666666667,54.400000000000006 469.6666666666667,54.400000000000006 H481.20000000000005 Q485.20000000000005,54.400000000000006 485.20000000000005,58.400000000000006 V128 Z" class="barre"/></g><g class="jour" data-info="22 septembre : 180 visiteurs"><rect x="486.20000000000005" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M487.20000000000005,128 V60 Q487.20000000000005,56 491.20000000000005,56 H502.7333333333334 Q506.7333333333334,56 506.7333333333334,60 V128 Z" class="barre"/></g><g class="jour" data-info="23 septembre : 151 visiteurs"><rect x="507.73333333333335" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M508.73333333333335,128 V71.6 Q508.73333333333335,67.6 512.7333333333333,67.6 H524.2666666666667 Q528.2666666666667,67.6 528.2666666666667,71.6 V128 Z" class="barre"/></g><g class="jour" data-info="24 septembre : 170 visiteurs"><rect x="529.2666666666667" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M530.2666666666667,128 V64 Q530.2666666666667,60 534.2666666666667,60 H545.8 Q549.8,60 549.8,64 V128 Z" class="barre"/></g><g class="jour" data-info="25 septembre : 190 visiteurs"><rect x="550.8000000000001" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M551.8000000000001,128 V56 Q551.8000000000001,52 555.8000000000001,52 H567.3333333333334 Q571.3333333333334,52 571.3333333333334,56 V128 Z" class="barre"/><text x="561.5666666666667" y="144" class="axe" text-anchor="middle">25</text></g><g class="jour" data-info="26 septembre : 141 visiteurs"><rect x="572.3333333333334" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M573.3333333333334,128 V75.6 Q573.3333333333334,71.6 577.3333333333334,71.6 H588.8666666666667 Q592.8666666666667,71.6 592.8666666666667,75.6 V128 Z" class="barre"/></g><g class="jour" data-info="27 septembre : 141 visiteurs"><rect x="593.8666666666667" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M594.8666666666667,128 V75.6 Q594.8666666666667,71.6 598.8666666666667,71.6 H610.4 Q614.4,71.6 614.4,75.6 V128 Z" class="barre"/></g><g class="jour" data-info="28 septembre : 179 visiteurs"><rect x="615.4000000000001" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M616.4000000000001,128 V60.400000000000006 Q616.4000000000001,56.400000000000006 620.4000000000001,56.400000000000006 H631.9333333333334 Q635.9333333333334,56.400000000000006 635.9333333333334,60.400000000000006 V128 Z" class="barre"/></g><g class="jour" data-info="29 septembre : 196 visiteurs"><rect x="636.9333333333334" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M637.9333333333334,128 V53.599999999999994 Q637.9333333333334,49.599999999999994 641.9333333333334,49.599999999999994 H653.4666666666667 Q657.4666666666667,49.599999999999994 657.4666666666667,53.599999999999994 V128 Z" class="barre"/></g><g class="jour" data-info="30 septembre : 197 visiteurs"><rect x="658.4666666666667" y="0" width="21.533333333333335" height="128" fill="transparent"/><path d="M659.4666666666667,128 V53.2 Q659.4666666666667,49.2 663.4666666666667,49.2 H675 Q679,49.2 679,53.2 V128 Z" class="barre"/><text x="669.2333333333333" y="144" class="axe" text-anchor="middle">30</text></g></svg>
+
+<h2>Ce qu'il faut retenir</h2>
+<ul><li>Le site a gagné 18 % de visiteurs par rapport à août.</li><li>Première source de visites : <b>Google</b>, avec 41 % des visiteurs.</li><li>68 % des visiteurs viennent d'un téléphone.</li><li>Meilleur jour : le 18 septembre, avec 300 visiteurs.</li><li>3,7 % des visiteurs vont jusqu'à « Achat ».</li></ul>
+
+<h2>D'où viennent les visiteurs, et ce qu'ils regardent</h2>
+<div class="grille2">
+  <section class="bloc"><h3>Sources</h3><table>
+    <thead><tr><th></th><th class="num">Visiteurs</th></tr></thead><tbody>
+    <tr><td><div class="nom">Google</div><div class="piste"><span style="width:100%"></span></div></td>
+      <td class="num">1 554<span class="part"> · 41 %</span></td>
+      </tr><tr><td><div class="nom">Accès direct</div><div class="piste"><span style="width:53.66795366795367%"></span></div></td>
+      <td class="num">834<span class="part"> · 22 %</span></td>
+      </tr><tr><td><div class="nom">Instagram</div><div class="piste"><span style="width:41.44144144144144%"></span></div></td>
+      <td class="num">644<span class="part"> · 17 %</span></td>
+      </tr><tr><td><div class="nom">Facebook</div><div class="piste"><span style="width:19.498069498069498%"></span></div></td>
+      <td class="num">303<span class="part"> · 8 %</span></td>
+      </tr><tr><td><div class="nom">TikTok</div><div class="piste"><span style="width:14.607464607464607%"></span></div></td>
+      <td class="num">227<span class="part"> · 6 %</span></td>
+      </tr><tr><td><div class="nom">Bing</div><div class="piste"><span style="width:7.335907335907336%"></span></div></td>
+      <td class="num">114<span class="part"> · 3 %</span></td>
+      </tr>
+  </tbody></table></section>
+  <section class="bloc"><h3>Pages les plus vues</h3><table>
+    <thead><tr><th></th><th class="num">Visiteurs</th><th class="num">Vues</th></tr></thead><tbody>
+    <tr><td><div class="nom">Accueil ( / )</div><div class="piste"><span style="width:100%"></span></div></td>
+      <td class="num">2 350</td>
+      <td class="num">2 820</td></tr><tr><td><div class="nom">/boutique</div><div class="piste"><span style="width:61.27659574468085%"></span></div></td>
+      <td class="num">1 440</td>
+      <td class="num">2 304</td></tr><tr><td><div class="nom">/produit/bougie-figue</div><div class="piste"><span style="width:33.87234042553192%"></span></div></td>
+      <td class="num">796</td>
+      <td class="num">1 035</td></tr><tr><td><div class="nom">/produit/coffret-hiver</div><div class="piste"><span style="width:25.78723404255319%"></span></div></td>
+      <td class="num">606</td>
+      <td class="num">728</td></tr><tr><td><div class="nom">/panier</div><div class="piste"><span style="width:17.74468085106383%"></span></div></td>
+      <td class="num">417</td>
+      <td class="num">625</td></tr><tr><td><div class="nom">/a-propos</div><div class="piste"><span style="width:11.27659574468085%"></span></div></td>
+      <td class="num">265</td>
+      <td class="num">265</td></tr>
+  </tbody></table></section>
+  <section class="bloc"><h3>Pays</h3><table>
+    <thead><tr><th></th><th class="num">Visiteurs</th></tr></thead><tbody>
+    <tr><td><div class="nom">France</div><div class="piste"><span style="width:100%"></span></div></td>
+      <td class="num">3 070<span class="part"> · 81 %</span></td>
+      </tr><tr><td><div class="nom">Belgique</div><div class="piste"><span style="width:8.631921824104234%"></span></div></td>
+      <td class="num">265<span class="part"> · 7 %</span></td>
+      </tr><tr><td><div class="nom">Suisse</div><div class="piste"><span style="width:6.188925081433225%"></span></div></td>
+      <td class="num">190<span class="part"> · 5 %</span></td>
+      </tr><tr><td><div class="nom">Canada</div><div class="piste"><span style="width:3.713355048859935%"></span></div></td>
+      <td class="num">114<span class="part"> · 3 %</span></td>
+      </tr><tr><td><div class="nom">Luxembourg</div><div class="piste"><span style="width:1.2377850162866448%"></span></div></td>
+      <td class="num">38<span class="part"> · 1 %</span></td>
+      </tr>
+  </tbody></table></section>
+  <section class="bloc"><h3>Appareils</h3><table>
+    <thead><tr><th></th><th class="num">Visiteurs</th></tr></thead><tbody>
+    <tr><td><div class="nom">Téléphone</div><div class="piste"><span style="width:100%"></span></div></td>
+      <td class="num">2 577<span class="part"> · 68 %</span></td>
+      </tr><tr><td><div class="nom">Ordinateur</div><div class="piste"><span style="width:42.6464881645324%"></span></div></td>
+      <td class="num">1 099<span class="part"> · 29 %</span></td>
+      </tr><tr><td><div class="nom">Tablette</div><div class="piste"><span style="width:4.423748544819558%"></span></div></td>
+      <td class="num">114<span class="part"> · 3 %</span></td>
+      </tr>
+  </tbody></table></section>
+</div>
+
+<h2>Du visiteur au client</h2>
+<section class="bloc"><h3>Objectifs</h3><table>
+    <thead><tr><th></th><th class="num">Visiteurs</th><th class="num">Taux</th></tr></thead><tbody>
+    <tr><td><div class="nom">Ajout au panier</div><div class="piste"><span style="width:100%"></span></div></td>
+      <td class="num">424</td>
+      <td class="num">11,2 %</td></tr><tr><td><div class="nom">Paiement</div><div class="piste"><span style="width:52.83018867924528%"></span></div></td>
+      <td class="num">224</td>
+      <td class="num">5,9 %</td></tr><tr><td><div class="nom">Achat</div><div class="piste"><span style="width:33.0188679245283%"></span></div></td>
+      <td class="num">140</td>
+      <td class="num">3,7 %</td></tr>
+  </tbody></table></section>
+
+<h2>Mon analyse et mes recommandations</h2>
+<div class="a-remplir" contenteditable="true">
+  <ul>
+    <li>[Ce qui a bien marché ce mois-ci, et pourquoi]</li>
+    <li>[Ce qui a freiné : page qui fait fuir, source en baisse, étape du panier qui perd des clients]</li>
+    <li>[Une ou deux actions simples à tester le mois prochain]</li>
+  </ul>
+</div>
+<p class="consigne">Clique dans la zone jaune pour écrire, puis Ctrl+P → « Enregistrer en PDF ». Ce texte et le surlignage n'apparaissent pas à l'impression.</p>
+
+<footer>Données du 1<sup>er</sup> au 30 septembre 2026, mesurées sans cookie et hébergées en Europe. Les visiteurs ne sont pas identifiés personnellement.</footer>
+</div>
+<div class="bulle" id="bulle"></div>
+<script>
+const b=document.getElementById('bulle');
+document.querySelectorAll('.jour').forEach(g=>{
+  g.addEventListener('mousemove',e=>{b.textContent=g.dataset.info;b.style.left=(e.clientX+12)+'px';b.style.top=(e.clientY-30)+'px';b.style.opacity=1});
+  g.addEventListener('mouseleave',()=>{b.style.opacity=0});
+});
+</script>
+</body></html>

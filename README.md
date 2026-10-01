@@ -98,3 +98,28 @@ sauvegarde-les régulièrement (arrêt avec `docker compose stop` avant copie).
 
 Un modèle d'e-mail de prospection (premier contact et relance) et les règles à
 respecter sont dans [docs/email-prospection.md](docs/email-prospection.md).
+
+## Rapport mensuel pour tes clients
+
+`rapport/` produit chaque mois un rapport de deux pages par client : chiffres
+clés comparés au mois précédent, visiteurs par jour, sources, pages, pays,
+appareils, objectifs, constats rédigés automatiquement, et une zone jaune où tu
+écris ton analyse. Un exemple avec des données fictives est dans
+[docs/exemple-rapport.html](docs/exemple-rapport.html).
+
+1. Dans Plausible : **Settings → API keys → New API key**, et copie la clé.
+2. Docker Desktop lancé, depuis le dossier du dépôt :
+   ```powershell
+   # exemple avec des données fictives, sans Plausible
+   powershell -ExecutionPolicy Bypass -File rapport\rapport.ps1 -Demo
+   # le vrai rapport du mois dernier (la clé est demandée la première fois)
+   powershell -ExecutionPolicy Bypass -File rapport\rapport.ps1 -Site boutique.fr -Agence "Ton nom"
+   # un mois précis, ou ton serveur au lieu de l'ordinateur
+   powershell -ExecutionPolicy Bypass -File rapport\rapport.ps1 -Site boutique.fr -Mois 2026-09 -Plausible https://stats.ton-domaine.fr
+   ```
+3. Le rapport s'ouvre dans le navigateur (il est rangé dans `rapports/`, que Git
+   ignore). Clique dans la zone jaune pour écrire ton analyse, puis
+   **Ctrl+P → Enregistrer en PDF** et envoie le PDF au client.
+
+Sur un serveur Linux : `PLAUSIBLE_API_KEY=… AGENCE="Ton nom" node rapport/rapport.mjs boutique.fr`
+(Node 18 ou plus).
